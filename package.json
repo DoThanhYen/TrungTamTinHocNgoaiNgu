@@ -1,0 +1,34 @@
+{
+  "name": "quanlytrungtamtinhoc_ngoaingu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoThanhYen/TrungTamTinHocNgoaiNgu.git"
+  },
+  "keywords": [
+    "Trung",
+    "tâm",
+    "tin",
+    "học",
+    "ngoại",
+    "ngữ"
+  ],
+  "author": "DoThanhYen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoThanhYen/TrungTamTinHocNgoaiNgu/issues"
+  },
+  "homepage": "https://github.com/DoThanhYen/TrungTamTinHocNgoaiNgu#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
