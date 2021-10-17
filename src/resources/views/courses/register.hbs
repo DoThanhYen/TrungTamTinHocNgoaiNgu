@@ -1,0 +1,74 @@
+<div class="mt-4 container">
+  <h3 class="text-center">Đăng ký Khóa Học</h3>
+  <form method="POST" action="/courses/{{course.class}}?_method=PUT">
+    <div class="form-group">
+      <label for="name"> khóa học </label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        value="{{course.name}}"
+        readonly
+      />
+    </div>
+    <div class="form-group">
+      <label for="class">Lớp</label>
+      <input
+        type="text"
+        class="form-control"
+        id="class"
+        name="class"
+        value="{{course.class}}"
+        readonly
+      />
+    </div>
+    <div class="form-group">
+      <label for="fullname">Họ và tên học viên</label>
+      <input type="text" class="form-control" id="fullname" name="fullname" />
+    </div>
+
+    <div class="form-group">
+      <label for="">Giới tính</label>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="gender"
+          id="gender1"
+          value="nam"
+        />
+        <label class="form-check-label" for="gender1">
+          nam
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="gender"
+          id="gender2"
+          value="nữ"
+        />
+        <label class="form-check-label" for="gender2">
+          nữ
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateofbirth">Ngày sinh</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dateofbirth"
+        name="dateofbirth"
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Số điện thoại</label>
+      <input type="text" class="form-control" id="phone" name="phone" />
+    </div>
+    <button type="submit" class="btn btn-primary mx-auto">Đăng ký</button>
+  </form>
+</div>

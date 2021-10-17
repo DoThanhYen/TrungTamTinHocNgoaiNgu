@@ -1,0 +1,31 @@
+<div class="container m-4">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lớp</th>
+      <th scope="col">Thời gian</th>
+      <th scope="col">Ngày khai giảng</th>
+      <th scope="col">Địa điểm học</th>
+      <th scope="col">Học phí</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each courses}}
+    <tr>
+      <th scope="row">{{this.name}}</th>
+      <td>{{this.datestart}}</td>
+      <td>{{this.schedule}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.fee}}</td>
+      <td>
+          <a  href="/courses/register/{{this.class}}" type="button" class="btn btn-primary">
+            Đăng ký
+          </a>
+      </td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+</div>
