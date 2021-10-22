@@ -1,0 +1,138 @@
+<div class="banner">
+  <div class="container">
+    <div class="col-md-6">
+      <h4 class="text-light py-4">
+        Chào Mừng Các Bạn Đến Với Các Khóa Học Của Trung Tâm Tin Học Ngoại Ngữ
+      </h4>
+      <button class="btn btn-me">Chi tiết về chúng tôi</button>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
+<div class="container mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+      <li class="breadcrumb-item"><a href="/subjects">khóa học</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Đăng ký thành công</li>
+    </ol>
+  </nav>
+</div>
+<div class="container mt-4">
+
+  <div class="card">
+    <div class="card-body">
+      <h1 class="text-center">ĐĂNG KÝ THÀNH CÔNG</h1>
+      <h5 class="card-title">Chào
+        <strong>{{student.fullname}}</strong>
+        , Vui lòng chuẩn bị số tiền
+        <span class="badge badge-warning">{{student.fee}}</span>
+        để thanh toán</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Trung tâm tin học ngoại ngữ có 2
+        hình thức thanh toán như sau :
+      </h6>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Chuyển khoản
+              </button>
+            </h5>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <p>Bạn có thể đến bất cứ ngân hàng nào ở Việt Nam (hoặc sử dụng
+                Internet Banking ) để chuyển học phí theo thông tin như sau :
+              </p>
+              <table>
+                <tr>
+                  <td>
+                    <img
+                      src="/images/viettinbank.png"
+                      alt="ngân hàng viettinbank"
+                    />
+                  </td>
+                  <td>
+                    <p>- Ngân hàng TMCP Công Thương Việt Nam - chi nhánh TP HCM</p>
+                    <p>- Tên tài khoản : Trung tâm tin học ngoại ngữ</p>
+                    <p>- Số tài khoản :1130 0000 4466
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <p><strong><i>Lưu ý </i></strong></p>
+              <p>Bạn phải viết chính xác 100% tên tài khoản và số tài khoản để
+                đảm bảo học phí được chuyển đến đúng nơi</p>
+              <ul>
+                <li>Trong khi chuyển khoản trong phần nội dung , bạn phải điền
+                  đầy đủ thông tin :
+                  <strong>Họ và tên học viên </strong>(có thể khác với họ tên
+                  người chuyển khoản )
+                  <strong>Số điện thoại liên hệ-Mã lớp
+                  </strong>>vào phiếu chuyển tiền
+                </li>
+                <li>Do có rất nhiều giao dịch chuyển khoản nên bạn nhớ giữ lại
+                  thông tin chuyển khoản và gửi về mail tuvan@abc.edu.vn để bộ
+                  phận ghi danh chúng tôi tiện đối chiếu và xuất biên lai cho
+                  bạn
+                </li>
+                <li>Trung tâm luôn kiểm tra giao dịch chuyển khoản mỗi ngày từ
+                  thứ 2 tới thứ 6 và sẽ liên hệ ngay với bạn khi nhận được thông
+                  tin chuyển khoản của bạn(trễ nhất là 3 ngày)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Thanh toán tiền mặt
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <h4>1.Địa chỉ</h4>
+              <p>- 71 Cộng Hòa, Phường 4, Tân Bình, Thành phố Hồ Chí Minh, Việt
+                Nam</p>
+              <h4>2.Thời gian làm việc </h4>
+              <p>- Từ thứ 2 đến thứ 6 : 7h30-19h30</p>
+              <p>- Từ thứ 7, chủ nhật : 7h30-17h30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Để được rõ hơn về hình thức thanh toán , vui lòng click vào link dưới
+        đây
+      </p>
+      <a class="btn btn-primary" href="/payinstruction">Hướng dẫn thanh toán
+      </a>
+    </div>
+  </div>
+</div>

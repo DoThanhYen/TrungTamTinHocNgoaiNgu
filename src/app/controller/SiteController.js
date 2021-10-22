@@ -1,7 +1,12 @@
+const Subject = require("../model/subject");
 class SiteController {
   // GET- [route home] /
-  home(req, res) {
-    res.render("home");
+  home(req, res, next) {
+    //res.render("home");
+    Subject.find()
+      .lean()
+      .then((subject) => res.render("home", { subject }))
+      .catch(next);
   }
 
   //GET- [route contact] /contact

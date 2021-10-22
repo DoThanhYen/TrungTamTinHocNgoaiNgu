@@ -1,0 +1,36 @@
+<div class="banner">
+  <div class="container">
+    <div class="col-md-6">
+      <h4 class="text-light py-4">
+        Chào Mừng Các Bạn Đến Với Các Khóa Học Của Trung Tâm Tin Học Ngoại Ngữ
+      </h4>
+      <button class="btn btn-me">Chi tiết về chúng tôi</button>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
+<div class="container mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Khóa học</li>
+    </ol>
+  </nav>
+</div>
+<div class="container mt-4">
+  <div class="row">
+    {{#each subject}}
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <p class="card-text">Chứng chỉ : {{this.certificate}}</p>
+            <p class="card-text">Thời lượng : {{this.time}}</p>
+            <a href="/subjects/{{this._id}}" class="btn btn-me">Lịch khai giảng</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

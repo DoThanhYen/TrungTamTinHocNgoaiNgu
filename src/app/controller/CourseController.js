@@ -1,12 +1,13 @@
 const Course = require("../model/course");
+const Subject = require("../model/subject");
 class CourseController {
   // GET [route courses] /courses
-  courses(req, res, next) {
-    Course.find()
-      .lean()
-      .then((courses) => res.render("courses", { courses }))
-      .catch(next);
-  }
+  // courses(req, res, next) {
+  //   Course.find()
+  //     .lean()
+  //     .then((courses) => res.render("courses", { courses }))
+  //     .catch(next);
+  // }
 
   //GET [route courses register] /courses/register/:class
   register(req, res, next) {
@@ -26,19 +27,21 @@ class CourseController {
       dateofbirth: req.body.dateofbirth,
       gender: req.body.gender,
       phone: req.body.phone,
+      email: req.body.email,
+      fee: req.body.fee,
     };
     Course.updateOne(
       { class: req.params.class },
       { $push: { students: student } }
     )
-      .then(() => res.send("successfully"))
+      .then(() => res.render("courses/registerSuccess", { student }))
       .catch(next);
     //res.json(req.body);
   }
 
-  //POST [route courses] /courses/create
-  create(req, res) {
-    return res.send("Đăng ký khóa học");
+  //GET [route courses register success] /courses/:class/registerSuccess
+  registerSuccess(req, res, next) {
+    res.render("courses/registerSuccess");
   }
 }
 

@@ -1,31 +1,57 @@
-<div class="container m-4">
-    <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Lớp</th>
-      <th scope="col">Thời gian</th>
-      <th scope="col">Ngày khai giảng</th>
-      <th scope="col">Địa điểm học</th>
-      <th scope="col">Học phí</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="banner">
+  <div class="container">
+    <div class="col-md-6">
+      <h4 class="text-light py-4">
+        Chào Mừng Các Bạn Đến Với Các Khóa Học Của Trung Tâm Tin Học Ngoại Ngữ
+      </h4>
+      <button class="btn btn-me">Chi tiết về chúng tôi</button>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
+<div class="container mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+      <li class="breadcrumb-item"><a href="/subjects">Khóa học</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Lịch khai giảng</li>
+    </ol>
+  </nav>
+</div>
+<div class="container table-me">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Lớp</th>
+        <th scope="col">Khóa học</th>
+        <th scope="col">Ngày khai giảng</th>
+        <th scope="col">Lịch học</th>
+        <th scope="col">Địa điểm học</th>
+        <th scope="col">Học phí</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
       {{#each courses}}
-    <tr>
-      <th scope="row">{{this.name}}</th>
-      <td>{{this.datestart}}</td>
-      <td>{{this.schedule}}</td>
-      <td>{{this.address}}</td>
-      <td>{{this.fee}}</td>
-      <td>
-          <a  href="/courses/register/{{this.class}}" type="button" class="btn btn-primary">
-            Đăng ký
-          </a>
-      </td>
-    </tr>
-    {{/each}}
-    
-  </tbody>
-</table>
+        <tr>
+          <th scope="row">{{this.class}}</th>
+          <td>{{this.subject_name}}</td>
+          <td>{{this.datestart}}</td>
+          <td>{{this.schedule}}</td>
+          <td>{{this.address}}</td>
+          <td>{{this.fee}}</td>
+          <td>
+            <a
+              href="/courses/register/{{this.class}}"
+              type="button"
+              class="btn btn-me"
+            >
+              Đăng ký
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
 </div>

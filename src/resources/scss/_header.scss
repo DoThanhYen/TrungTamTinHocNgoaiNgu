@@ -1,0 +1,23 @@
+header {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 0.5px solid #eaeaea;
+    .fas {
+        color: $color_main;
+    }
+    img {
+        vertical-align: top;
+    }
+}
+
+nav {
+    background-color: white;
+    border-bottom: 0.5px solid #eaeaea;
+    a {
+        color: black;
+        &:hover,
+        &:active {
+            color: $color_main;
+        }
+    }
+}
